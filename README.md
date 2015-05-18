@@ -3,7 +3,7 @@ jsmpeg-live-demo
 
 #### Motivation ####
 
-A demo usage of the [jmpeg] javascript MPEG1 Decoder using websockets.
+A demo usage of the [jmpeg](https://github.com/131/jsmpeg) javascript MPEG1 Decoder using websockets.
 
 
 ### Installation ###
