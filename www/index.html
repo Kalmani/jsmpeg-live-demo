@@ -15,29 +15,5 @@
 <body>
   <canvas id="videoCanvas" width="640" height="480">
   </canvas>
-  <script type="text/javascript">
-    // Show loading notice
-    var canvas = document.getElementById('videoCanvas');
-    var ctx = canvas.getContext('2d');
-    ctx.fillStyle = '#444';
-    ctx.fillText('Loading...', canvas.width/2-30, canvas.height/3);
-
-    var player;
-    var socket = io.connect();
-
-    socket.once("connect", function(){
-      console.log("Connected");
-
-      socket.once("VS_INIT", function(data, ack) {
-        console.log("VS_INIT DATA", data);
-        ack(true);
-        player = new jsmpeg(data.width, data.height, {canvas:canvas});
-        socket.on("VS", function(data){
-          player.feed(data);
-        });
-      });
-    });
-
-  </script>
 </body>
 </html>
