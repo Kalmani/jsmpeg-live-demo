@@ -1,0 +1,22 @@
+{
+ "default_tasks" : {
+    "concat" : true,
+    "jshint" : true,
+    "jscs"  : false
+  },
+  
+  "statics" : [
+  ],
+
+ "files": {
+  "www/dependencies/mootools/MooTools-Core-1.5.1.js":{"jshint" : false},
+  "www/dependencies/mootools/MooTools-More-1.5.1-compressed.js":{"jshint" : false},
+  "www/dependencies/prototype.js":{"jshint" : false},
+  "www/dependencies/mustache.js":{"jshint" : false},
+  "www/dependencies/jquery/jQuery.1.11.2.min.js":{"jshint" : false},
+  "www/dependencies/bootstrap/js/bootstrap.js":{"jshint" : false},
+  "www/dependencies/socket.io-1.0.6.js":{"jshint" : false},
+  "www/main_app.js":{"jshint" : true, "jscs" : true},
+  "www/init.js":{"jshint" : false}
+ }
+}

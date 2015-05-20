@@ -1,2 +1,6 @@
 node_modules
-public/vendor
+www/vendor
+www/app.js
+www/app.jshint.js
+www/templates.xml
+www/theme/main.css

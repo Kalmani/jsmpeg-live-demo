@@ -1,12 +1,11 @@
 require('nyks');
-var Streamer = require('./lib/streamer.js');
+var Streamer = require('./lib/streamer.js'),
+    Interface = require('./lib/interface.js'),
+    //see streamer.js for available options
+    args     = process.parseargs().dict,
+    server;
 
-//see streamer.js for available options
-var args     = process.parseargs().dict;
-
-
-
-var server;
+//interface = new Interface();
 
 Streamer.listDevices(function(devices){
    console.info("Available video devices", devices.video);
@@ -18,11 +17,9 @@ Streamer.listDevices(function(devices){
    } else if(!devices.video.contains(args.camera_name))
       throw ("Invalid camera name " + args.camera_name);
 
-
   server = new Streamer(args);
   server.startServer(function(){
     server.startStreamer();
   });
 
 });
-
